@@ -1,7 +1,7 @@
 import streamlit as st
 import snowflake.connector
-from snowflake.snowpark.functions import col
-import pandas
+
+
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(),
